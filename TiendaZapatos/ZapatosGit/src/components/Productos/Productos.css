@@ -1,0 +1,52 @@
+.listar {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom:5em;
+}
+
+.nombre {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    margin-bottom: 1em;
+}
+
+.nombre img {
+    width: 20em;
+    height: 20em;
+}
+
+.productos {
+    background-color: #efefef;
+    padding: 2em;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.marca {
+    display: flex;
+}
+
+.detail-btn {
+    text-decoration: none;
+    color: #efefef;
+    background-color: black;
+    border: transparent;
+    border-radius: 40px;
+    font-weight: bold;
+    padding: 1em 3em;
+}
+
+.detail-btn:hover {
+    background-color: #414141;
+}
+
+.mp {
+    display: flex;
+    justify-content: space-between;
+}
