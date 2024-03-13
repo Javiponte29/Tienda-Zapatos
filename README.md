@@ -4,7 +4,7 @@
  ```
  2. npm install 
  ```
-3. # Configuración Spring:
+ # Configuración Spring:
 1. Descargar el proyecto.
  ```
 2. CREATE DATABASE nombre_de_tu_base_de_datos;
