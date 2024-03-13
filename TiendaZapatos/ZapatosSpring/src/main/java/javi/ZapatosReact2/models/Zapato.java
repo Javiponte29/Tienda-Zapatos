@@ -1,6 +1,8 @@
 package javi.ZapatosReact2.models;
 
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -9,7 +11,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import javi.ZapatosReact2.models.enumerated.Tipo;
 
@@ -46,10 +50,15 @@ public class Zapato {
     @Column(length = 800)
     private String descripcion;
 
+    @OneToMany( mappedBy = "tallas")
+    private List<Talla> tallas;
+
+
+
 
 
     public Zapato(Integer id, Marca marca, Modelo modelo, TallaColor talla_color, Double precio, Tipo tipo,
-            String imagen, String descripcion) {
+            String imagen, String descripcion, List<Talla> tallas) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -58,6 +67,7 @@ public class Zapato {
         this.tipo = tipo;
         this.imagen = imagen;
         this.descripcion = descripcion;
+        this.tallas = tallas;
     }
 
     public Zapato() {
@@ -114,7 +124,8 @@ public class Zapato {
     @Override
     public String toString() {
         return "Zapato [id=" + id + ", marca=" + marca + ", modelo=" + modelo + ", talla_color=" + talla_color
-                + ", precio=" + precio + ", tipo=" + tipo + ", imagen=" + imagen + ", descripcion=" + descripcion + "]";
+                + ", precio=" + precio + ", tipo=" + tipo + ", imagen=" + imagen + ", descripcion=" + descripcion
+                + ", tallas=" + tallas + "]";
     }
 
     public String getImagen() {
@@ -131,6 +142,14 @@ public class Zapato {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public List<Talla> getTallas() {
+        return tallas;
+    }
+
+    public void setTallas(List<Talla> tallas) {
+        this.tallas = tallas;
     }
 
     

@@ -34,7 +34,8 @@ public class ZapatoRestController {
 
     @GetMapping("/list")
     public List<Zapato> mostrar() {
-        return zSer.getZapatos();
+        return  zSer.getZapatos();
+        
     }
     
 

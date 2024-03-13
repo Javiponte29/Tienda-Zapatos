@@ -1,0 +1,38 @@
+.cart {
+    padding-bottom: 8em;
+    margin-left: 15%;
+    margin-right: 8%;
+
+}
+
+.cart img {
+    width: 12em;
+    height: 12em;
+}
+
+.prod-car {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.cart h2 {
+    font-size: 3em;
+}
+
+.pm {
+    font-weight: bold;
+}
+
+.prod-car button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: transparent;
+}
+
+.prod-car button:hover {
+    background-color: #414141;
+}

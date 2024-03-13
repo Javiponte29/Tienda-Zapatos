@@ -53,29 +53,6 @@ const Productos = () => {
 
     return (
         <div className='listar'>
-            {/*<h1>Welcome {user.emial}</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Precio</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {productos.map(producto =>(
-                        <tr key={producto.id}>
-                            <td>{producto.id}</td>
-                            <td>{producto.marca.nombre}</td>
-                            <td>{producto.modelo.nombre}</td>
-                            <td>{producto.precio}</td>
-                            <td>{producto.tipo}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>*/}
             {productos.map(producto =>(
                         <div className='productos' key={producto.id}>
                                 <div className='nombre'>

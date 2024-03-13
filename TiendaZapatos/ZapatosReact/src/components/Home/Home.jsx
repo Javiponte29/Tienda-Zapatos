@@ -41,7 +41,6 @@ return (
     {/*<h1>Welcome {user.email}</h1>*/}
     <header>
         <h2>Yeezy 500</h2>
-    <button><NavLink to={"/zapato"}>Zapatos</NavLink></button>
     </header>
     <main>
         {productos.map(producto =>(
@@ -50,6 +49,7 @@ return (
                         <Link className='btn-h' to={`/zapato/${producto.id}`}>Ver Producto</Link>
                     </div>
         ))}
+        
     </main>
     </body>
 )};

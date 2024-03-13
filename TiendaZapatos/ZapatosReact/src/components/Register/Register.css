@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     margin: 2em;
+    padding-bottom: 6em;
 }
 
 .form-reg form{
     display: flex;
     flex-flow: column;
     background-color: #efefef;
-    width: 20%;
+    width: 15em;
     align-items: center;
     padding: 2em;
     border-radius: 40px;

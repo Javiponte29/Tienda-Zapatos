@@ -17,6 +17,12 @@
 .nombre img {
     width: 20em;
     height: 20em;
+    transition: transform 0.3s ease;
+    margin-bottom: 1em;
+}
+
+.nombre img:hover {
+    transform: scale(1.12); 
 }
 
 .productos {

@@ -12,18 +12,13 @@ header {
     
 }
 
-header button {
-    width: 8em;
+header a {
     background-color: black;
-    height: 3em;
+    width: 8em;
+    text-align: center;
     border-radius: 20px;
-    margin: 0 0 1em 10em;
-}
-
-header button a {
-    text-decoration: none;
+    margin-left: 7em;
     color: white;
-    font-size: 1.5em;
 }
 
 header h2 {
@@ -38,6 +33,7 @@ main {
     justify-content: space-around;
     padding-bottom: 8em;
     margin-top: 2em;
+    flex-wrap: wrap;
 }
 
 
@@ -47,6 +43,7 @@ main {
     flex-flow: column;
     text-align: center;
     flex-wrap: wrap;
+    margin: 1em 0;
 }
 
 .prod-home img {

@@ -2,7 +2,7 @@ import './Footer.css';
 
 const Footer = () => 
 <footer>
-    Footer
+Francisco Javier Ponte Yáñez ©2024 
 </footer>;
 
 export default Footer;

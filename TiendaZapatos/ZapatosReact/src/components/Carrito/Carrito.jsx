@@ -12,31 +12,33 @@ const Carrito = () => {
     }, []);
 
     const removeFromCart = (productId) => {
-        const updatedCart = cart.filter(item => item.id !== productId);
-        setCart(updatedCart);
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        const confirmation = window.confirm('¿Estás seguro de que quieres eliminar este producto del carrito?');
+        if (confirmation) {
+            const updatedCart = cart.filter(item => item.id !== productId);
+            setCart(updatedCart);
+            localStorage.setItem('cart', JSON.stringify(updatedCart));
+        }
     };
 
     return (
-        <div>
-            <h1>Carrito de Compras</h1>
+        <div className='cart'>
             {cart.length === 0 ? (
-                <p>El carrito está vacío</p>
+                <h2>Tu carrito está vacío</h2>
             ) : (
-                <ul>
+                <div className='prod-car'>
                     {cart.map(item => (
-                        <li key={item.id}>
+                        <div key={item.id}>
                             <div>
                                 <img src={item.imagen} alt={item.modelo && item.modelo.nombre} />
                             </div>
                             <div>
-                                <h2>{item.marca && item.marca.nombre}</h2>
-                                <h3>{item.tipo} {item.modelo && item.modelo.nombre}</h3>
+                                <p className='pm'>{item.marca && item.marca.nombre}</p>
+                                <p>{item.tipo} {item.modelo && item.modelo.nombre}</p>
                                 <button onClick={() => removeFromCart(item.id)}>Eliminar del carrito</button>
                             </div>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );

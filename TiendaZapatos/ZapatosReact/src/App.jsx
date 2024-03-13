@@ -14,13 +14,22 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
+  const [productos, setProductos] = useState([]);
+  useEffect(() => {
+      fetch('http://localhost:8080/zapato/list').
+      then(response => response.json()).
+      then(data => setPosts(data));
+  })
+
+  
+
   return (
     <div>
     <AuthProvider>
       <NavBar/>
     <Routes>
       <Route path='/' element={<Navigate to={"/home"}/>} />
-      <Route path='/home' element={<Home />}/>
+      <Route path='/home' element={<Home productos={productos.slice(0,5)} />}/>
       <Route path='/zapato' element={<Productos />}/>
       <Route path='/zapato/:id' element={<ProductosDetails />} />
       <Route path='/login' element={<Login />}/>
