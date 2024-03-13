@@ -8,4 +8,5 @@
      3. Una vez en el proyecto ir a la ruedita de ajustes y bajar hasta encontrar el SDK.
       ```
      4. npm install firebase
+      ```
      5. Copiar y pegar el SDK en ZapatosReact\src\firebase\config.js.
